@@ -59,7 +59,7 @@ document.querySelectorAll("#proyectos .card").forEach(card => {
 });
 
 /* TARJETAS GENERALES (FORMACIÓN Y EXPERIENCIA) */
-document.querySelectorAll(".card:not(#cardDatos):not(#proyectos .card)").forEach(card => {
+document.querySelectorAll("#formacion .card, #experiencia .card").forEach(card => {
     card.addEventListener("click", () => {
         modalTitle.textContent = card.querySelector(".card__title").textContent;
         modalSubtitle.textContent = card.querySelector(".card__subtitle").textContent;
@@ -83,3 +83,4 @@ window.addEventListener("click", e => {
     if (e.target === modalProyectos) closeModalFunc(modalProyectos);
     if (e.target === modalDatos) closeModalFunc(modalDatos);
 });
+
