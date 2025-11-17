@@ -1,4 +1,4 @@
-/* TABS */
+/*    TABS    */
 const tabsButtons = document.querySelectorAll(".tabs__button");
 const tabsContents = document.querySelectorAll(".tabs__content");
 
@@ -14,72 +14,15 @@ tabsButtons.forEach(btn => {
     });
 });
 
-/* MODAL */
+/*    MODAL GENERAL (TARJETAS)     */
 const modal = document.getElementById("cardModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalSubtitle = document.getElementById("modalSubtitle");
 const modalText = document.getElementById("modalText");
 const modalLong = document.getElementById("modalLong");
-const closeModal = document.querySelector(".modal__close");
+const closeModal = document.querySelector("#cardModal .modal__close");
 
-/* MODAL PROYECTOS PERSONALES */
-const modalProyectos = document.getElementById("modalProyectos");
-const modalProyectoTitle = document.getElementById("modalProyectoTitle");
-const modalProyectoSubtitle = document.getElementById("modalProyectoSubtitle");
-const modalProyectoText = document.getElementById("modalProyectoText");
-const modalProyectoLong = document.getElementById("modalProyectoLong");
-const closeProyectos = document.getElementById("closeProyectos");
-
-// Seleccionar las tarjetas de los proyectos personales
-const projectCards = document.querySelectorAll("#proyectos .card");
-
-projectCards.forEach(card => {
-    card.addEventListener("click", () => {
-        modalProyectoTitle.textContent = card.querySelector(".card__title").textContent;
-        modalProyectoSubtitle.textContent = card.querySelector(".card__subtitle").textContent;
-        modalProyectoText.textContent = card.querySelector(".card__copy").textContent;
-        modalProyectoLong.textContent = card.dataset.long;
-
-        modalProyectos.style.display = "flex";
-        document.body.classList.add("modal-open");
-    });
-});
-
-closeProyectos.addEventListener("click", () => {
-    modalProyectos.style.display = "none";
-    document.body.classList.remove("modal-open");
-});
-
-window.addEventListener("click", e => {
-    if (e.target === modalProyectos) {
-        modalProyectos.style.display = "none";
-        document.body.classList.remove("modal-open");
-    }
-});
-
-
-/* MODAL DATOS PERSONALES */
-const cardDatos = document.getElementById("cardDatos");
-const modalDatos = document.getElementById("modalDatosPersonales");
-const closeDatos = document.getElementById("closeDatos");
-
-cardDatos.addEventListener("click", () => {
-    modalDatos.style.display = "flex";
-    document.getElementById("modalOverlay").style.display = "block";
-});
-
-closeDatos.addEventListener("click", () => {
-    modalDatos.style.display = "none";
-    document.getElementById("modalOverlay").style.display = "none";
-});
-
-window.addEventListener("click", (e) => {
-    if (e.target === modalDatos) {
-        modalDatos.style.display = "none";
-        document.getElementById("modalOverlay").style.display = "none";
-    }
-});
-
+// Seleccionamos todas las tarjetas excepto la de datos personales
 const cards = document.querySelectorAll(".card:not(#cardDatos)");
 
 cards.forEach(card => {
@@ -106,3 +49,60 @@ window.addEventListener("click", e => {
     }
 });
 
+/*    MODAL PROYECTOS PERSONALES    */
+const modalProyectos = document.getElementById("modalProyectos");
+const modalProyectoTitle = document.getElementById("modalProyectoTitle");
+const modalProyectoSubtitle = document.getElementById("modalProyectoSubtitle");
+const modalProyectoText = document.getElementById("modalProyectoText");
+const modalProyectoLong = document.getElementById("modalProyectoLong");
+const closeProyectos = document.getElementById("closeProyectos");
+
+// Seleccionamos las tarjetas dentro de proyectos
+const projectCards = document.querySelectorAll("#proyectos .card");
+
+projectCards.forEach(card => {
+    card.addEventListener("click", () => {
+        modalProyectoTitle.textContent = card.querySelector(".card__title").textContent;
+        modalProyectoSubtitle.textContent = card.querySelector(".card__subtitle").textContent;
+        modalProyectoText.textContent = card.querySelector(".card__copy").textContent;
+        modalProyectoLong.textContent = card.dataset.long;
+
+        modalProyectos.style.display = "flex";
+        document.body.classList.add("modal-open");
+    });
+});
+
+closeProyectos.addEventListener("click", () => {
+    modalProyectos.style.display = "none";
+    document.body.classList.remove("modal-open");
+});
+
+window.addEventListener("click", e => {
+    if (e.target === modalProyectos) {
+        modalProyectos.style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
+});
+
+/*    
+   MODAL DATOS PERSONALES    */
+const cardDatos = document.getElementById("cardDatos");
+const modalDatos = document.getElementById("modalDatosPersonales");
+const closeDatos = document.getElementById("closeDatos");
+
+cardDatos.addEventListener("click", () => {
+    modalDatos.style.display = "flex";
+    document.body.classList.add("modal-open");
+});
+
+closeDatos.addEventListener("click", () => {
+    modalDatos.style.display = "none";
+    document.body.classList.remove("modal-open");
+});
+
+window.addEventListener("click", e => {
+    if (e.target === modalDatos) {
+        modalDatos.style.display = "none";
+        document.body.classList.remove("modal-open");
+    }
+});
