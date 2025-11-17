@@ -107,34 +107,33 @@ main {
     justify-content: center;
     align-items: center;
     animation: fadeIn 0.3s ease;
-
     z-index: 9999 !important;
 }
 
-#modalDatosPersonales .modal__content {
-    max-width: 400px;
-}
-
+/* Modal general */
 .modal__content {
     background: white;
     padding: 2rem;
     border-radius: 1rem;
     width: 90%;
     max-width: 500px;
+    max-height: 90%;
+    overflow-y: auto;
     transform: scale(0.8);
     animation: modalOpen 0.35s ease forwards;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-
     position: relative;
     z-index: 10000;
 }
 
-
-@keyframes modalOpen {
-    from { transform: scale(0.8); opacity: 0; }
-    to   { transform: scale(1); opacity: 1; }
+/* Modal de datos personales más pequeño (3/5 de la altura) */
+#modalDatosPersonales .modal__content {
+    max-width: 400px;
+    max-height: 60%; /* 3/5 de la altura de la pantalla */
+    overflow-y: auto;
 }
 
+/* Botón de cierre y demás contenido */
 .modal__close {
     position: absolute;
     top: 15px;
@@ -180,6 +179,3 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
-
-
-
