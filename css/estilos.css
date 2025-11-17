@@ -114,9 +114,8 @@ main {
     background: white;
     padding: 2rem;
     border-radius: 1rem;
-    width: 180%;          /* 2 veces el ancho original del 90% */
-    max-width: 1000px;    /* 2 veces 500px */
-    height: auto;
+    width: 600px;
+    height: 400px;
     min-height: calc(100% * 1.2); /* 1.2 veces la altura de la ventana, opcional */
     transform: scale(0.8);
     animation: modalOpen 0.35s ease forwards;
@@ -172,4 +171,5 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
+
 
