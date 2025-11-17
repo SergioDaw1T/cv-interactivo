@@ -110,27 +110,20 @@ main {
     z-index: 9999 !important;
 }
 
-/* Modal general */
 .modal__content {
     background: white;
     padding: 2rem;
     border-radius: 1rem;
-    width: 90%;
-    max-width: 500px;
-    max-height: 90%;
-    overflow-y: auto;
+    width: 180%;          /* 2 veces el ancho original del 90% */
+    max-width: 1000px;    /* 2 veces 500px */
+    height: auto;
+    min-height: calc(100% * 1.2); /* 1.2 veces la altura de la ventana, opcional */
     transform: scale(0.8);
     animation: modalOpen 0.35s ease forwards;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
     position: relative;
     z-index: 10000;
-}
-
-/* Modal de datos personales más pequeño (3/5 de la altura) */
-#modalDatosPersonales .modal__content {
-    max-width: 400px;
-    max-height: 60%; /* 3/5 de la altura de la pantalla */
-    overflow-y: auto;
 }
 
 /* Botón de cierre y demás contenido */
@@ -179,3 +172,4 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
+
