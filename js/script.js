@@ -80,7 +80,7 @@ window.addEventListener("click", (e) => {
     }
 });
 
-const cards = document.querySelectorAll(".card");
+const cards = document.querySelectorAll(".card:not(#cardDatos)");
 
 cards.forEach(card => {
     card.addEventListener("click", () => {
@@ -105,3 +105,4 @@ window.addEventListener("click", e => {
         document.body.classList.remove("modal-open"); 
     }
 });
+
