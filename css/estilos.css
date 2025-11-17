@@ -112,7 +112,8 @@ main {
 }
 
 #modalDatosPersonales .modal__content {
-    max-width: 600px;
+    max-width: 400px;
+    heigth: 400px
 }
 
 .modal__content {
@@ -180,3 +181,4 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
+
