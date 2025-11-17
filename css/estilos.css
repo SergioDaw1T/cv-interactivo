@@ -1,0 +1,182 @@
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(135deg, #dce6ff, #f0f4ff);
+}
+
+/* Main */
+main {
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+    border-radius: 1rem;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 4px 25px rgba(0,0,0,0.12);
+}
+
+.tabs__header {
+    display: flex;
+    background: #fafafa;
+}
+.tabs__button {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-weight: 600;
+    color: #555;
+    transition: 0.3s;
+}
+
+.tabs__button:hover {
+    background: #f0f0f0;
+}
+
+.tabs__button--active {
+    background: #dfe6ff;
+    color: #2a3fa1;
+}
+
+.tabs__content {
+    display: none;
+    padding: 2rem;
+}
+
+.tabs__content--active {
+    display: block;
+}
+
+/* CARDS */
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transform: translateY(0);
+    transition: 0.25s;
+    border-top: 4px solid #6a8dff;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #1c1c1c;
+}
+
+.card__subtitle {
+    margin: 0.3rem 0 1rem;
+    font-size: 1rem;
+    color: #6d6d6d;
+}
+
+.card__copy {
+    color: #333;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
+
+    z-index: 9999 !important;
+}
+
+#modalDatosPersonales .modal__content {
+    max-width: 600px;
+}
+
+.modal__content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    transform: scale(0.8);
+    animation: modalOpen 0.35s ease forwards;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+
+    position: relative;
+    z-index: 10000;
+}
+
+
+@keyframes modalOpen {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+.modal__close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    color: #444;
+}
+
+.modal__content h2 {
+    margin-top: 0;
+    color: #1a1a1a;
+}
+
+.modal__content h3 {
+    color: #5a5a5a;
+}
+
+.modal__content p {
+    margin-top: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Cuando el modal está abierto, desenfoco el contenido */
+body.modal-open main {
+    filter: blur(5px) brightness(0.7);
+    transition: 0.3s ease;
+}
+
+.modal__content a {
+    display: inline-block;
+    color: #2a4dbf;           
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    transition: 0.25s ease;
+}
+
+.modal__content a:hover {
+    color: #1a2f8a;        
+    border-bottom: 2px solid #1a2f8a;
+    transform: translateY(-2px); 
+}

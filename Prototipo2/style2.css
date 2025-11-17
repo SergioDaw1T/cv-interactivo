@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Esto hace que en todos los navegadores los márgenes... se vean igual */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+  color: #2E2E2E;
+}
+
+header {
+  background-color: #e0b0dc;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+header .logo {
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-top: 2px solid #ffffff;
+  padding: 15px 40px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  gap: 40px;
+}
+
+nav a {
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+.nav-buttons {
+  position: absolute;
+  display: flex;
+  gap: 12px;
+  right: 40px;
+}
+
+.login {
+  padding: 6px 14px;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.download {
+  padding: 6px 14px;
+  background-color: #ccff00;
+  color: #000000;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+main {
+  display: block;
+}
+
+section.hero {
+  background-color: #e0b0dc;
+  padding: 80px 160px;
+}
+
+section.hero article {
+  display: flex;
+  align-items: center;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  margin-right: 300px;
+}
+
+.hero-left h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #000000;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.hero-left p {
+  font-size: 18px;
+  color: #2E2E2E;
+  font-weight: 400;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.app-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.app-buttons .qr {
+  width: 90px;
+  height: 90px;
+}
+
+.store-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.store-buttons img {
+  width: 140px;
+}
+
+aside {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+aside img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  display: block;
+}
+
+section.cta {
+  background-color: #e4e4e4;
+  text-align: center;
+  padding: 60px 160px;
+}
+
+section.cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #2E2E2E;
+  margin-bottom: 20px;
+}
+
+.cta-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.cta-content .qr-cta {
+  width: 100px;
+  height: 100px;
+}
+
+.cta-content p {
+  font-size: 18px;
+  color: #4F4F4F;
+}
+
+footer {
+  background-color: #e0b0dc;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+footer a {
+  font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+}
+
+footer p {
+  font-size: 14px;
+  color: #000000;
+}
