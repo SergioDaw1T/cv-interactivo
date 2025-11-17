@@ -114,40 +114,24 @@ main {
     background: white;
     padding: 2rem;
     border-radius: 1rem;
-    width: 600px;
-    height: 400px;
-    min-height: calc(100% * 1.2); /* 1.2 veces la altura de la ventana, opcional */
-    transform: scale(0.8);
+    width: 800px; /* Aumentar el ancho */
+    height: 600px; /* Aumentar la altura */
+    min-height: 50%; /* También puedes usar un porcentaje si lo prefieres */
+    transform: scale(0.8); /* Iniciar con escala reducida */
     animation: modalOpen 0.35s ease forwards;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
-
     position: relative;
     z-index: 10000;
 }
 
-/* Botón de cierre y demás contenido */
-.modal__close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 1.7rem;
-    cursor: pointer;
-    color: #444;
-}
-
-.modal__content h2 {
-    margin-top: 0;
-    color: #1a1a1a;
-}
-
-.modal__content h3 {
-    color: #5a5a5a;
-}
-
-.modal__content p {
-    margin-top: 1rem;
-    line-height: 1.5;
-    color: #333;
+/* Animación para el modal */
+@keyframes modalOpen {
+    0% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1); /* Hace que el modal crezca hasta su tamaño final */
+    }
 }
 
 /* Cuando el modal está abierto, desenfoco el contenido */
@@ -171,5 +155,6 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
+
 
 
