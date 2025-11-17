@@ -112,29 +112,24 @@ main {
 
 /* MODAL GENERAL */
 .modal__content {
-    --modal-width: 600px;     /* ancho base del modal */
+    width: 600px;
+    height: 420px; /* 70% del ancho */
 
-    width: var(--modal-width);
-    max-width: 90vw;          /* por si la pantalla es pequeña */
-
-    /* ALTURA PROPORCIONAL AL ANCHO (más ancho que alto SIEMPRE) */
-    max-height: calc(var(--modal-width) * 0.7);
-
-    overflow-y: auto;
     background: white;
     padding: 2rem;
     border-radius: 1rem;
+    overflow-y: auto;
 
     transform: scale(0.85);
     animation: modalOpen 0.35s ease forwards;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     position: relative;
-    z-index: 10000;
 }
 
-/* MODAL DATOS PERSONALES (más pequeño pero proporcional) */
+/* MODAL DATOS PERSONALES (más pequeño) */
 .modal__content--datos {
-    --modal-width: 400px;   /* cambia solo el ancho */
+    width: 400px;
+    height: 280px; /* 70% del ancho */
     padding: 1.5rem;
 }
 
@@ -143,8 +138,6 @@ main {
     from { transform: scale(0.85); }
     to   { transform: scale(1); }
 }
-
-
 
 /* Cuando el modal está abierto, desenfoco el contenido */
 body.modal-open main {
@@ -167,6 +160,7 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
+
 
 
 
