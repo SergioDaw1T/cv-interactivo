@@ -114,8 +114,8 @@ main {
     background: white;
     padding: 2rem;
     border-radius: 1rem;
-    width: 800px; /* Aumentar el ancho */
-    height: 600px; /* Aumentar la altura */
+    width: 600px; /* Aumentar el ancho */
+    height: 500px; /* Aumentar la altura */
     min-height: 50%; /* También puedes usar un porcentaje si lo prefieres */
     transform: scale(0.8); /* Iniciar con escala reducida */
     animation: modalOpen 0.35s ease forwards;
@@ -155,6 +155,7 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
+
 
 
 
