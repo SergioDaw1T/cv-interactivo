@@ -124,6 +124,13 @@ main {
     z-index: 10000;
 }
 
+/* Estilo específico para el modal de Datos Personales */
+.modal__content--datos {
+    height: 400px; /* Ajusta la altura del modal de Datos Personales */
+    min-height: 50%; /* Puedes ajustar esto si quieres más flexibilidad */
+    padding: 1.5rem; /* Ajusta el relleno si es necesario */
+}
+
 /* Animación para el modal */
 @keyframes modalOpen {
     0% {
@@ -155,7 +162,3 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
-
-
-
-
