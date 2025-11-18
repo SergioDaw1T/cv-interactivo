@@ -113,7 +113,7 @@ main {
 /* MODAL GENERAL */
 .modal__content {
     width: 600px;
-    height: 420px; /* 70% del ancho */
+    height: 220px; 
 
     background: white;
     padding: 2rem;
@@ -129,7 +129,7 @@ main {
 /* MODAL DATOS PERSONALES (más pequeño) */
 .modal__content--datos {
     width: 400px;
-    height: 280px; /* 70% del ancho */
+    height: 180px; 
     padding: 1.5rem;
 }
 
@@ -160,6 +160,7 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
+
 
 
 
