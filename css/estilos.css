@@ -110,13 +110,14 @@ main {
     z-index: 9999 !important;
 }
 
+/* MODAL GENERAL */
 .modal__content {
     width: 600px;
-    height: 220px; 
+    max-height: 80vh; /* ya no se corta */
     background: white;
-    padding: 0; /* OJO: lo movemos al interior */
+    padding: 0; /* el padding va dentro */
     border-radius: 1rem;
-    overflow: hidden; /* mantiene esquinas redondeadas PERFECTAS */
+    overflow: hidden; /* esquinas perfectas */
 
     transform: scale(0.85);
     animation: modalOpen 0.35s ease forwards;
@@ -124,18 +125,17 @@ main {
     position: relative;
 }
 
-/* Contenedor con scroll */
+/* Contenedor con scroll interno */
 .modal__inner {
     padding: 2rem;
     height: 100%;
-    overflow-y: auto; /* Scroll aquí */
+    overflow-y: auto; 
 }
 
-/* MODAL DATOS PERSONALES (más pequeño) */
+/* MODAL DATOS PERSONALES */
 .modal__content--datos {
     width: 400px;
-    height: 180px; 
-    padding: 1.5rem;
+    max-height: 75vh; /* ya no se corta */
 }
 
 /* Animación */
@@ -165,9 +165,3 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
-
-
-
-
-
-
