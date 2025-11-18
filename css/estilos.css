@@ -110,20 +110,25 @@ main {
     z-index: 9999 !important;
 }
 
-/* MODAL GENERAL */
 .modal__content {
     width: 600px;
     height: 220px; 
-
     background: white;
-    padding: 2rem;
+    padding: 0; /* OJO: lo movemos al interior */
     border-radius: 1rem;
-    overflow-y: auto;
+    overflow: hidden; /* mantiene esquinas redondeadas PERFECTAS */
 
     transform: scale(0.85);
     animation: modalOpen 0.35s ease forwards;
     box-shadow: 0 20px 40px rgba(0,0,0,0.25);
     position: relative;
+}
+
+/* Contenedor con scroll */
+.modal__inner {
+    padding: 2rem;
+    height: 100%;
+    overflow-y: auto; /* Scroll aquí */
 }
 
 /* MODAL DATOS PERSONALES (más pequeño) */
@@ -160,6 +165,7 @@ body.modal-open main {
     border-bottom: 2px solid #1a2f8a;
     transform: translateY(-2px); 
 }
+
 
 
 
